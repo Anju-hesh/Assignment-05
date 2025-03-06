@@ -1,0 +1,452 @@
+body {
+    margin: 0;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 12px;
+}
+
+#logo-container {
+    display: flex;
+    animation: slideRight 5s ease forwards;
+}
+
+header {
+    background-color: #333;
+    width: 98.7%;
+    height: 8vh;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: absolute; /* samahara component udin ynwa fixed karahama */
+    top: 0;
+    left: 0;
+}
+
+header:hover{
+    color: aqua;
+    box-shadow: 0 0 20px aqua;
+    backdrop-filter: blur(5px); 
+}
+
+nav > ul {
+    display: flex;
+    list-style: none;
+}
+
+nav > ul > li {
+    margin: 0 30px;
+}
+
+nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop 4s ease forwards;
+}
+
+nav > ul > li > a:hover{
+    color: aqua;
+    box-shadow: 0 0 10px aqua;
+    backdrop-filter: blur(3px); 
+}
+
+#hero-section {
+    display: flex;
+    background-color: rgb(13, 13, 38);
+}
+
+#hero-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+    color: white;
+}
+
+#hero-image {
+    width: 50%;
+    object-fit: cover;
+    width: 450px;
+    height: 450px;
+    border-radius: 100%;
+    border: 5px solid aqua;
+    box-shadow: 0 0 20px aqua;
+    backdrop-filter: blur(5px); 
+    margin: 15%;
+}
+
+#download-cv {
+    background-color: aqua;
+    font-size: 18px;
+    color: white;
+    width: 35%;
+    margin-top: 20px;
+    margin-left: 25%;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px aqua;
+    backdrop-filter: blur(5px); 
+}
+
+#download-cv:hover{
+    color: black;
+    box-shadow: 0 0 30px aqua;
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+}
+
+#social-media {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 25%;
+}
+
+#social-media img {
+    width: 32px;
+    height: 32px;
+    border-radius: 12px;
+    margin: 0 12px;
+}
+
+#social-media img:hover {
+    box-shadow: 0 0 30px aqua;
+    backdrop-filter: blur(8px);
+}
+
+#show-name{
+    font-size: 3rem;
+    animation: slideRight 5s ease forwards;
+    animation-delay: 5s;
+}
+
+.who-i-am{
+    color: aqua;
+}
+
+#hero-h1 {
+    font-size: 25px;
+    animation: slideTop 2s ease forwards;
+}
+
+.hero-paragraph{
+    animation: slideLeft 2s ease forwards;
+}
+
+.burger-menu{
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+
+@keyframes slideLeft {
+    0%{
+        transform: translateX(200px);
+        opacity: 0.2;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 6vh;
+        padding: 8px;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    #logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    nav > ul {
+        display: none; 
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        background-color: black;
+        width: 100%;
+        padding: 10px 0;
+        opacity: 0;
+        gap: 30px;
+        transform: translateY(-20px); 
+        transition: opacity 0.3s ease, transform 0.3s ease; 
+        z-index: 999; 
+    }
+
+    nav.active > ul {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0); 
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    #hero-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 8vh;
+    }
+
+    #hero-content {
+        width: 80%;
+        padding: 16px;
+    }
+
+    #hero-image {
+        width: 250px;
+        height: 250px;
+        margin: 5% auto;
+    }
+
+    #download-cv {
+        width: 50%;
+        margin: 15px auto;
+    }
+
+    #social-media {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    #show-name {
+        font-size: 2rem;
+    }
+
+    #hero-h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-paragraph {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    header {
+        height: 6vh;
+    }
+
+    #logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    #hero-content {
+        width: 90%;
+        padding: 12px;
+    }
+
+    #hero-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    #download-cv {
+        width: 60%;
+        font-size: 16px;
+    }
+
+    #social-media img {
+        width: 28px;
+        height: 28px;
+    }
+
+    #show-name {
+        font-size: 1.8rem;
+    }
+
+    #hero-h1 {
+        font-size: 1.2rem;
+    }
+
+    .hero-paragraph {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    header {
+        height: 5vh;
+    }
+
+    #logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    #hero-content {
+        width: 95%;
+        padding: 10px;
+    }
+
+    #hero-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    #download-cv {
+        width: 70%;
+        font-size: 14px;
+    }
+
+    #social-media img {
+        width: 24px;
+        height: 24px;
+    }
+
+    #show-name {
+        font-size: 1.5rem;
+    }
+
+    #hero-h1 {
+        font-size: 1rem;
+    }
+
+    .hero-paragraph {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    header {
+        height: 5vh;
+    }
+
+    #logo {
+        width: 25px;
+        height: 25px;
+    }
+
+    #hero-content {
+        width: 100%;
+        padding: 8px;
+    }
+
+    #hero-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    #download-cv {
+        width: 80%;
+        font-size: 12px;
+    }
+
+    #social-media img {
+        width: 20px;
+        height: 20px;
+    }
+
+    #show-name {
+        font-size: 1.2rem;
+    }
+
+    #hero-h1 {
+        font-size: 0.9rem;
+    }
+
+    .hero-paragraph {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    #hero-image {
+        width: 400px;
+        height: 400px;
+        margin: 12%;
+    }
+    
+    #download-cv {
+        width: 30%;
+        margin-left: 20%;
+    }
+    
+    #social-media {
+        margin-left: 20%;
+    }
+    
+    #show-name {
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        height: 7vh;
+    }
+    
+    nav > ul > li {
+        margin: 0 20px;
+    }
+    
+    #hero-image {
+        width: 350px;
+        height: 350px;
+        margin: 10%;
+    }
+    
+    #hero-content {
+        width: 55%;
+        padding: 20px;
+    }
+    
+    #download-cv {
+        width: 40%;
+        margin-left: 15%;
+    }
+    
+    #social-media {
+        margin-left: 15%;
+    }
+    
+    #show-name {
+        font-size: 2.5rem;
+    }
+    
+    #hero-h1 {
+        font-size: 22px;
+    }
+}

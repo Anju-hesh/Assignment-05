@@ -1,0 +1,388 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.thank-you-section {
+    background-color: rgb(13, 13, 38);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.thank-you-container {
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgb(33, 26, 55);
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.thank-you-container > img{
+    width: 250px;
+    height: 150px;
+}
+
+.checkmark i {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 20px aqua;
+    backdrop-filter: blur(5px); 
+    background-color: aqua;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    color: black;
+    box-shadow: 0 0 30px aqua;
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    color: aqua;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: aqua;
+}
+
+.social-links #image:hover{
+    box-shadow: 0 0 30px aqua;
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    scale: 1.2;
+}
+
+@media screen and (max-width: 320px) {
+    .thank-you-container {
+        max-width: 280px;
+        padding: 15px;
+    }
+    
+    .thank-you-container > img {
+        width: 180px;
+        height: 100px;
+    }
+    
+    .checkmark i {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+    }
+    
+    p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .cta-button:hover {
+        font-size: 16px;
+    }
+    
+    .social-links {
+        margin-top: 20px;
+    }
+    
+    .social-links p {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+    }
+    
+    .social-links ul {
+        gap: 10px;
+    }
+    
+    .social-links a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+    .thank-you-container {
+        max-width: 320px;
+        padding: 18px;
+    }
+    
+    .thank-you-container > img {
+        width: 200px;
+        height: 120px;
+    }
+    
+    .checkmark i {
+        font-size: 60px;
+        margin-bottom: 18px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+    
+    p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    
+    .cta-button {
+        padding: 9px 18px;
+        font-size: 0.95rem;
+    }
+    
+    .cta-button:hover {
+        font-size: 18px;
+    }
+    
+    .social-links {
+        margin-top: 25px;
+    }
+    
+    .social-links p {
+        font-size: 0.85rem;
+    }
+    
+    .social-links a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    .thank-you-container {
+        max-width: 370px;
+        padding: 20px;
+    }
+    
+    .thank-you-container > img {
+        width: 220px;
+        height: 130px;
+    }
+    
+    .checkmark i {
+        font-size: 65px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    p {
+        font-size: 1.1rem;
+    }
+    
+    .cta-button:hover {
+        font-size: 19px;
+    }
+    
+    .social-links a {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .thank-you-container {
+        max-width: 500px;
+    }
+    
+    .thank-you-container > img {
+        width: 230px;
+        height: 140px;
+    }
+    
+    .checkmark i {
+        font-size: 70px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    p {
+        font-size: 1.15rem;
+    }
+    
+    .social-links ul {
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .thank-you-container {
+        max-width: 550px;
+        padding: 25px;
+    }
+    
+    .thank-you-container > img {
+        width: 240px;
+        height: 145px;
+    }
+    
+    .checkmark i {
+        font-size: 75px;
+        margin-bottom: 25px;
+    }
+    
+    h1 {
+        font-size: 2.3rem;
+    }
+    
+    p {
+        font-size: 1.25rem;
+    }
+    
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 1.1rem;
+    }
+    
+    .social-links {
+        margin-top: 35px;
+    }
+    
+    .social-links p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .thank-you-container {
+        max-width: 600px;
+        padding: 30px;
+    }
+    
+    .thank-you-container > img {
+        width: 250px;
+        height: 150px;
+    }
+    
+    .checkmark i {
+        font-size: 80px;
+        margin-bottom: 25px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+    
+    .cta-button {
+        padding: 12px 25px;
+    }
+    
+    .social-links ul {
+        gap: 25px;
+    }
+    
+    .social-links a {
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .thank-you-container {
+        max-width: 700px;
+        padding: 35px;
+    }
+    
+    .thank-you-container > img {
+        width: 280px;
+        height: 170px;
+    }
+    
+    .checkmark i {
+        font-size: 90px;
+        margin-bottom: 30px;
+    }
+    
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+    
+    p {
+        font-size: 1.4rem;
+        margin-bottom: 35px;
+    }
+    
+    .cta-button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+    }
+    
+    .cta-button:hover {
+        font-size: 22px;
+    }
+    
+    .social-links {
+        margin-top: 40px;
+    }
+    
+    .social-links p {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .social-links ul {
+        gap: 30px;
+    }
+    
+    .social-links a {
+        font-size: 28px;
+    }
+}

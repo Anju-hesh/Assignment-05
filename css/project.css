@@ -1,0 +1,251 @@
+.project-section{
+    color: aliceblue;
+    background-color: rgb(13, 13, 38);
+}
+
+.main-text{
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+
+.main-text h2{
+    font-size: 60px;
+    line-height: 2px;
+    text-align: center;
+}
+
+.main-text h2 span{
+    color: aqua;
+}
+
+.project-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(359px,auto));
+}
+
+.row{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.row img{
+    width: 600px;
+    height: 400px;
+    margin-top: 100px;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s ease ;
+}
+
+.layer{
+    width: 72.5%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.1),aqua);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s ease-in-out;
+}
+
+.layer h5{
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.layer p{
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.row:hover img{
+    transform: scale(1.1);
+}
+
+.row:hover .layer{
+    height: 80%;
+}
+
+@media screen and (max-width: 768px) {
+    .main-text {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+
+    .main-text h2 {
+        font-size: 35px;
+        line-height: 1.5;
+    }
+
+    .project-content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    }
+
+    .row img {
+        width: 95%;
+        height: auto;
+        margin-top: 40px 20px 20px 20px;
+    }
+
+    .layer {
+        width: 98%;
+        padding: 0 20px;
+    }
+
+    .layer h5 {
+        font-size: 12px;
+    }
+
+    .layer p {
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .main-text {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    .main-text h2 {
+        font-size: 30px;
+    }
+
+    .project-content {
+        grid-template-columns: repeat(200px,1fr);
+    }
+
+    .row img {
+        width: 90%;
+        margin: 30px auto 15px auto;
+    }
+
+    .layer {
+        width: 95%;
+        padding: 0 15px;
+    }
+
+    .layer h5 {
+        font-size: 10px;
+    }
+
+    .layer p {
+        font-size: 0.4rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .main-text {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .main-text h2 {
+        font-size: 25px;
+    }
+
+    .project-content {
+        grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+    }
+
+    .row img {
+        width: 85%;
+        margin: 20px auto 10px auto;
+    }
+
+    .layer {
+        width: 90%;
+        padding: 0 10px;
+    }
+
+    .layer h5 {
+        font-size: 9px;
+    }
+
+    .layer p {
+        font-size: 0.35rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main-text {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .main-text h2 {
+        font-size: 20px;
+    }
+
+    .project-content {
+        grid-template-columns: repeat(150px,1fr);
+    }
+
+    .row img {
+        width: 80%;
+        margin: 15px auto 10px auto;
+    }
+
+    .layer {
+        width: 85%;
+        padding: 0 25px;
+    }
+
+    .layer h5 {
+        font-size: 8px;
+    }
+
+    .layer p {
+        font-size: 0.4rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .project-content {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .layer {
+        width: 94%;
+        padding: 0 25px;
+    }
+
+    .layer h5 {
+        font-size: 2rem;
+    }
+
+    .layer p {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .project-content {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    .layer {
+        width: 94%;
+        padding: 0 25px;
+    }
+
+    .layer h5 {
+        font-size: 2rem;
+    }
+
+    .layer p {
+        font-size: 0.8rem;
+    }
+}

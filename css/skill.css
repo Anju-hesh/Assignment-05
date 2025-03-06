@@ -1,0 +1,283 @@
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .skill-section {
+            background-color: rgb(40, 40, 50);
+            color: aliceblue;
+            padding: 50px 20px;
+        }
+
+        .sub-title-skill {
+            text-align: center;
+            font-size: 60px;
+            margin-bottom: 50px;
+        }
+
+        .sub-title-skill span {
+            color: aqua;
+        }
+
+        .section-div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .Skills-container {
+            width: 600px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .heading-1 {
+            text-align: center;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            text-decoration-thickness: 5px;
+            margin-bottom: 30px;
+            color: aqua;
+        }
+
+        .technical-bars {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .bar {
+            width: calc(50% - 20px);
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .skills-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .skills-info span {
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        .progress-line {
+            position: relative;
+            width: 100%;
+            height: 10px;
+            border-radius: 10px;
+            background-color: black;
+        }
+
+        .progress-line span {
+            position: absolute;
+            height: 100%;
+            border-radius: 10px;
+            background-color: aqua;
+            animation: fillAnimation 1.5s ease-in-out forwards;
+        }
+
+        @keyframes fillAnimation {
+            0% { width: 0; }
+            100% { width: var(--skill-level); }
+        }
+
+        .progress-line.html span { --skill-level: 75%; }
+        .progress-line.css span { --skill-level: 65%; }
+        .progress-line.Java-Script span { --skill-level: 60%; }
+        .progress-line.My-Sql span { --skill-level: 85%; }
+        .progress-line.Java span { --skill-level: 90%; }
+        .progress-line.PhotoShop span { --skill-level: 78%; }
+        .progress-line.java-fx span { --skill-level: 70%; }
+
+        .radial-bars {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .radial-bar {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .radial-bar svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+        
+        .radial-bar .progress-bar {
+            fill: none;
+            stroke: #222; 
+            stroke-width: 10;
+            stroke-linecap: round;
+        }
+        
+        .radial-bar .path {
+            fill: none;
+            stroke: aqua;
+            stroke-width: 10;
+            stroke-linecap: round;
+            stroke-dasharray: 283; 
+            stroke-dashoffset: 283;
+            animation: radialAnimation 2s ease-in-out forwards;
+        }
+        
+        @keyframes radialAnimation {
+            0% { stroke-dashoffset: 0; } 
+            100% { stroke-dashoffset: var(--stroke-end); } 
+        }
+        
+        .radial-bar .path-1 { --stroke-end: calc(283 * (1 - 0.85)); } /* 85% */
+        .radial-bar .path-2 { --stroke-end: calc(283 * (1 - 0.65)); } /* 65% */
+        .radial-bar .path-3 { --stroke-end: calc(283 * (1 - 0.72)); } /* 72% */
+        .radial-bar .path-4 { --stroke-end: calc(283 * (1 - 0.90)); } /* 90% */
+        
+        .radial-bar .percentage {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .radial-bar .text {
+            position: absolute;
+            bottom: 10px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            font-size: 16px;
+            color: white;
+        }
+
+        @media screen and (max-width: 1440px) {
+            .Skills-container {
+                width: 500px;
+            }
+        }
+        
+        @media screen and (max-width: 1024px) {
+            .Skills-container {
+                width: 400px;
+            }
+        
+            .radial-bar {
+                width: 180px;
+                height: 180px;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .sub-title-skill {
+                font-size: 50px;
+            }
+        
+            .Skills-container {
+                width: 100%;
+                padding: 20px;
+            }
+        
+            .bar {
+                width: 100%;
+            }
+        
+            .radial-bar {
+                width: 150px;
+                height: 150px;
+            }
+        
+            .radial-bar .percentage {
+                font-size: 18px;
+            }
+        
+            .radial-bar .text {
+                font-size: 14px;
+            }
+        }
+        
+        @media screen and (max-width: 425px) {
+            .sub-title-skill {
+                font-size: 40px;
+            }
+        
+            .skills-info span {
+                font-size: 15px;
+            }
+        
+            .radial-bar {
+                width: 120px;
+                height: 120px;
+            }
+        
+            .radial-bar .percentage {
+                font-size: 16px;
+            }
+        
+            .radial-bar .text {
+                font-size: 12px;
+            }
+        }
+        
+        @media screen and (max-width: 375px) {
+            .sub-title-skill {
+                font-size: 35px;
+            }
+        
+            .skills-info span {
+                font-size: 14px;
+            }
+        
+            .radial-bar {
+                width: 100px;
+                height: 100px;
+            }
+        
+            .radial-bar .percentage {
+                font-size: 14px;
+            }
+        
+            .radial-bar .text {
+                font-size: 10px;
+            }
+        }
+        
+        @media screen and (max-width: 320px) {
+
+            .heading-1{
+                font-size: 25px;
+            }
+
+            .sub-title-skill {
+                font-size: 20px;
+            }
+        
+            .skills-info span {
+                font-size: 12px;
+            }
+        
+            .radial-bar {
+                width: 80px;
+                height: 80px;
+            }
+        
+            .radial-bar .percentage {
+                font-size: 12px;
+            }
+        
+            .radial-bar .text {
+                font-size: 8px;
+            }
+        }
