@@ -149,6 +149,7 @@ nav > ul > li > a:hover{
     cursor: pointer;
     font-size: 30px;
     color: white;
+    margin-right: 15px;
 }
 
 @keyframes slideLeft {
