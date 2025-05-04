@@ -1,48 +1,59 @@
-.project-section{
+.project-section {
     color: aliceblue;
     background-color: rgb(13, 13, 38);
 }
 
-.main-text{
+.main-text {
     padding-top: 120px;
     padding-bottom: 100px;
 }
 
-.main-text h2{
+.main-text h2 {
     font-size: 60px;
     line-height: 2px;
     text-align: center;
 }
 
-.main-text h2 span{
+.main-text h2 span {
     color: aqua;
 }
 
-.project-content{
+.project-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(359px,auto));
+    grid-template-columns: repeat(auto-fit, minmax(359px, auto));
+    gap: 20px;
+    justify-content: center;
 }
 
-.row{
+.row {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     cursor: pointer;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.1);
+    transition: box-shadow 0.3s ease;
 }
 
-.row img{
-    width: 600px;
-    height: 400px;
+.row:hover {
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
+}
+
+.row img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
     margin-top: 100px;
     border-radius: 8px;
     display: block;
-    transition: transform 0.5s ease ;
+    transition: transform 0.5s ease;
 }
 
-.layer{
+.layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.1),aqua);
+    background: linear-gradient(rgba(0, 0, 0, 0.1), aqua);
     position: absolute;
     border-radius: 8px;
     left: 0;
@@ -57,24 +68,24 @@
     transition: height 0.5s ease-in-out;
 }
 
-.layer h5{
+.layer h5 {
     color: #000;
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 15px;
 }
 
-.layer p{
+.layer p {
     color: #000;
     font-size: 1rem;
     line-height: 1.6;
 }
 
-.row:hover img{
+.row:hover img {
     transform: scale(1.1);
 }
 
-.row:hover .layer{
+.row:hover .layer {
     height: 80%;
 }
 
@@ -94,9 +105,7 @@
     }
 
     .row img {
-        width: 95%;
-        height: auto;
-        margin-top: 40px 20px 20px 20px;
+        margin-top: 40px;
     }
 
     .layer {
@@ -105,11 +114,11 @@
     }
 
     .layer h5 {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .layer p {
-        font-size: 0.5rem;
+        font-size: 0.6rem;
     }
 }
 
@@ -124,11 +133,10 @@
     }
 
     .project-content {
-        grid-template-columns: repeat(200px,1fr);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
     .row img {
-        width: 90%;
         margin: 30px auto 15px auto;
     }
 
@@ -138,11 +146,11 @@
     }
 
     .layer h5 {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .layer p {
-        font-size: 0.4rem;
+        font-size: 0.6rem;
     }
 }
 
@@ -171,11 +179,11 @@
     }
 
     .layer h5 {
-        font-size: 9px;
+        font-size: 10px;
     }
 
     .layer p {
-        font-size: 0.35rem;
+        font-size: 0.5rem;
     }
 }
 
@@ -190,7 +198,7 @@
     }
 
     .project-content {
-        grid-template-columns: repeat(150px,1fr);
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
     .row img {
@@ -200,11 +208,11 @@
 
     .layer {
         width: 85%;
-        padding: 0 25px;
+        padding: 0 10px;
     }
 
     .layer h5 {
-        font-size: 8px;
+        font-size: 9px;
     }
 
     .layer p {
@@ -223,11 +231,11 @@
     }
 
     .layer h5 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .layer p {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }
 
@@ -246,6 +254,6 @@
     }
 
     .layer p {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
     }
 }
