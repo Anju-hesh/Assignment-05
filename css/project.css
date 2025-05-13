@@ -25,6 +25,27 @@
     justify-content: center;
 }
 
+#gitLink {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f5f9ff;
+    color: #0d6efd;
+    border: 1px solid #cfe2ff;
+    border-radius: 8px;
+    text-decoration: none !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  #gitLink:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+    transform: translateY(-2px);
+  }
+
 .row {
     position: relative;
     overflow: hidden;
